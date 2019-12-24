@@ -1,0 +1,21 @@
+server:
+  port: 8080
+person:
+  address: 大连街老酒馆
+#spring:
+#  profiles:
+#    active: prod
+
+---
+server:
+  port: 8081
+spring:
+  profiles: dev
+
+
+---
+
+server:
+  port: 8082
+spring:
+  profiles: prod

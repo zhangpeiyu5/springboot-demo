@@ -1,13 +1,28 @@
 package com.zpy.springboot;
 
-import org.junit.jupiter.api.Test;
+import com.zpy.springboot.domain.Person;
+import com.zpy.springboot.service.HelloService;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
+import org.springframework.test.context.junit4.SpringRunner;
 
 @SpringBootTest
-class SpringbootApplicationTests {
+@RunWith(SpringRunner.class)
+public class SpringbootApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Autowired
+    private Person person;
+
+    @Autowired
+    private ApplicationContext applicationContext;
+
+    @Test
+    public void contextLoads() {
+        System.out.println(person);
+        System.out.println(applicationContext.containsBean("helloService2"));
+    }
 
 }
