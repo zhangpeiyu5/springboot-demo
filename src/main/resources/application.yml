@@ -2,9 +2,19 @@ server:
   port: 8080
 person:
   address: 大连街老酒馆
+##指定生效的环境
 #spring:
 #  profiles:
 #    active: prod
+
+
+##指定日志级别
+logging:
+  level:
+    com.zpy: error
+
+
+
 
 ---
 server:
